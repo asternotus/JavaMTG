@@ -1,2 +1,3 @@
 # JavaMTG
 JavaMTG
+First commit
