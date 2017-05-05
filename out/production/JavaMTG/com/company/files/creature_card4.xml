@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<root>
+    <cardtype>Существо</cardtype>
+    <cardname>Неуловимая Мучительница</cardname>
+    <cardtext>Сбросьте карту: трансформируйте неуловимую мучительницу</cardtext>
+    <signaturetext></signaturetext>
+    <cardpic></cardpic>
+    <stats>4-4</stats>
+</root>

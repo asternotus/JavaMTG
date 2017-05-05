@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<root>
+    <cardtype>Существо</cardtype>
+    <cardname>Отборный Боец Лилианы</cardname>
+    <cardtext>Отборный боец лилианы получает +1.+1 за каждую карту существа на вашем кладбище. </cardtext>
+    <signaturetext>Признай, Гидеон - он в отличной форме
+    </signaturetext>
+    <cardpic></cardpic>
+    <stats>1.1</stats>
+</root>
