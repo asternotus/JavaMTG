@@ -13,23 +13,16 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
-        Scanner scanner = new Scanner(System.in);
-        Deck deck = new Deck();
-        for(int i=0;i<5; i++){
-           deck.add(scanner.nextLine());
-        }
+        Deck deck = new Deck("JavaMTG/src/com/company/files");
 
-        DeckController deckController = new DeckController(deck);
-        System.out.println("It is just for test");
         System.out.println("Колода готова");
+        System.out.println();
+        
 
-        Collections.shuffle(deck.getCards());
+        for(int i = 0 ; i < deck.getCards().size();i++){
+            System.out.println(deck.getCardFromTop().getCardname()) ;
 
-        for(int i=0;i<=4; i++){
-           if (scanner.nextLine().equals("снять")){
-               Card top = deck.getCardFromTop();
-               System.out.println(top.getCardname());
-            }
         }
+
     }
 }
