@@ -20,7 +20,7 @@ public class Main {
         }
 
         DeckController deckController = new DeckController(deck);
-
+        System.out.println("It is just for test");
         System.out.println("Колода готова");
 
         Collections.shuffle(deck.getCards());
