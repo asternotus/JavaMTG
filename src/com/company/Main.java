@@ -27,5 +27,5 @@ public class Main {
 
         deckController.cardPresent(1,deck);
         }
-        //хуйхуйхуй
+        //Rfr ds;bnm d >;yjErhfbycrt&
     }
