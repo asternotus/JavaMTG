@@ -23,8 +23,14 @@ public class Main {
 
         System.out.println("РљРѕР»РѕРґР° РіРѕС‚РѕРІР°");
 
+<<<<<<< HEAD
+// Привет как дела
+        for(int i = 0 ; i < deck.getCards().size();i++){
+            System.out.println(deck.getCardFromTop().getCardname()) ;
+=======
 
         deckController.shuffle(deck);
+>>>>>>> origin/Ruslan2
 
         deckController.cardPresent(1,deck);
         }
