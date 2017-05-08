@@ -23,6 +23,7 @@ public class Main {
 
         System.out.println("Колода готова");
 
+
         deckController.shuffle(deck);
 
         deckController.cardPresent(1,deck);
