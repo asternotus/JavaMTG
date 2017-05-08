@@ -17,7 +17,7 @@ public class Main {
 
         System.out.println("Колода готова");
         System.out.println();
-        
+
 
         for(int i = 0 ; i < deck.getCards().size();i++){
             System.out.println(deck.getCardFromTop().getCardname()) ;
