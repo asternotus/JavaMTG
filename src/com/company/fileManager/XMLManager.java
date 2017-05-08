@@ -14,15 +14,19 @@ import java.io.IOException;
  */
 public class XMLManager {
 
-    public Card makeCard(String fileName) throws IOException, SAXException, ParserConfigurationException {
-        SAXParserFactory factory = SAXParserFactory.newInstance();
-        SAXParser parser = factory.newSAXParser();
-        MySAXParser saxp = new MySAXParser();
+    SAXParserFactory factory;
+    SAXParser parser ;
+    MySAXParser saxp;
+    public XMLManager() throws ParserConfigurationException, SAXException {
+        factory = SAXParserFactory.newInstance();
+        parser = factory.newSAXParser();
+        saxp= new MySAXParser();
+    }
 
-        File currentDirFile = new File("src\\com\\company\\files\\");
-        //String filePath = "C:\\Users\\ASTERNOTUS\\Desktop\\JavaMTG\\src\\com\\company\\files\\";
 
-        parser.parse(new File(currentDirFile+"\\"+fileName),saxp);
+    public Card makeCard(String fileName) throws IOException, SAXException {
+
+        parser.parse(fileName,saxp);
         return saxp.getThisCard();
     }
 }

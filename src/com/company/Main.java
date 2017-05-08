@@ -12,26 +12,18 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
-        Scanner scanner = new Scanner(System.in);
-        Deck deck = new Deck();
 
-        for(int i=0;i<5; i++){
-           deck.add(scanner.nextLine());
-        }
+            Deck deck = new Deck("JavaMTG/src/com/company/files");
 
-        DeckController deckController = new DeckController(deck);
+            System.out.println("ÐšÐ¾Ð»Ð¾Ð´Ð° Ð³Ð¾Ñ‚Ð¾Ð²Ð°");
+            System.out.println();
 
-        System.out.println("ÐšÐ¾Ð»Ð¾Ð´Ð° Ð³Ð¾Ñ‚Ð¾Ð²Ð°");
 
-<<<<<<< HEAD
-// Ïðèâåò êàê äåëà
-        for(int i = 0 ; i < deck.getCards().size();i++){
-            System.out.println(deck.getCardFromTop().getCardname()) ;
-=======
 
-        deckController.shuffle(deck);
->>>>>>> origin/Ruslan2
+            for(int i = 0 ; i < deck.getCards().size();i++){
+                System.out.println(deck.getCardFromTop().getCardname()) ;
 
-        deckController.cardPresent(1,deck);
+            }
+
         }
     }
