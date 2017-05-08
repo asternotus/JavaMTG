@@ -69,7 +69,6 @@ public abstract class Card {
         this.spin = spin;
     }
 
-    //fuck your mom
     public String getCardtype() {
         return cardtype;
     }

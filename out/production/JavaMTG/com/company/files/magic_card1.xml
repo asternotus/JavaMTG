@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <root>
-    <cardname>Тиски течений</cardname>
     <cardtype>Волшебство</cardtype>
+    <cardname>Тиски течений</cardname>
     <cardtext>Верните целевое существо в руку</cardtext>
     <signaturetext></signaturetext>
     <cardpic></cardpic>

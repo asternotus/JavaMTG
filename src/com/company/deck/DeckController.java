@@ -7,6 +7,7 @@ import org.xml.sax.SAXException;
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Dictionary;
 import java.util.Random;
 
@@ -23,17 +24,21 @@ public class DeckController {
         this.deck = deck;
     }
 
-    public ArrayList<Card> shuffle(){
-        int m = deck.getCards().size();
-        ArrayList<Card> shuffledDeck = new ArrayList<>();
-
-        for(int i = 0; i < m; i++) {
-            Random random = new Random(m);
-            int randomNum = random.nextInt(m);
-            shuffledDeck.add(deck.getCards().get(randomNum));
-            deck.getCards().remove(randomNum);
-        }
-        return shuffledDeck;
+    public void shuffle(Deck deck){                     //сделал это метод void
+        Collections.shuffle(deck.getCards());
     }
 
-}
+    /**
+     * В этот метод передается число кард, которое нужно снять.
+     * Сделано для того, чтобы тестить легче было
+     */
+    public void cardPresent(int numOfCards, Deck deck){
+        for (int i = 0; i < numOfCards; i++) {
+            Card card = deck.getCards().get(0);
+            deck.getCards().remove(0);
+            System.out.println(card.getCardname());
+        }
+
+        }
+    }
+
