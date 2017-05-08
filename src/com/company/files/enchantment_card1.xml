@@ -1,12 +1,7 @@
 <?xml version="1.0"?>
 <root>
-
     <cardtype>Чары</cardtype>
     <cardname>Сминающие кольца</cardname>
-
-    <cardname>Сминающие кольца</cardname>
-    <cardtype>Чары.Аура</cardtype>
-
     <cardtext>Зачаровать существо</cardtext>
     <signaturetext>Испытать в действии</signaturetext>
     <cardpic></cardpic>

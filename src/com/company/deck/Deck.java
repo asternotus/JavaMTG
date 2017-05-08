@@ -13,9 +13,7 @@ import java.util.ArrayList;
 public class Deck {
     private ArrayList<Card> cards;
 
-
     XMLManager manager= new XMLManager();
-
 
     public void setCards(ArrayList<Card> cards) {
         this.cards = cards;

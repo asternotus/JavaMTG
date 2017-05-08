@@ -1,12 +1,7 @@
 <?xml version="1.0"?>
 <root>
-
     <cardtype>Мгновенное заклинание</cardtype>
     <cardname>Предвосхищение</cardname>
-
-    <cardname>Предвосхищение</cardname>
-    <cardtype>Мгновенное заклинание</cardtype>
-
     <cardtext>Три верхние карты</cardtext>
     <signaturetext>Ситх изменил его</signaturetext>
     <cardpic></cardpic>
