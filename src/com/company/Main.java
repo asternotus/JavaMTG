@@ -18,7 +18,7 @@ public class Main {
         System.out.println("РљРѕР»РѕРґР° РіРѕС‚РѕРІР°");
         System.out.println();
 
-
+// Привет как дела
         for(int i = 0 ; i < deck.getCards().size();i++){
             System.out.println(deck.getCardFromTop().getCardname()) ;
 
