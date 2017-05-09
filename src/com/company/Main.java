@@ -13,7 +13,7 @@ public class Main {
 
     public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
 
-        Deck deck = new Deck("D:\\Projects\\GitHub\\JavaMTG\\src\\com\\company\\files");
+        Deck deck = new Deck("JavaMTG/src/com/company/files");
 
 
         System.out.println("Колода готова");

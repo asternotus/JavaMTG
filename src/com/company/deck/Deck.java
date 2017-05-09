@@ -45,6 +45,7 @@ public class Deck {
     public void add(String path) throws ParserConfigurationException, SAXException, IOException {
 
         File file = new File(path);
+
         //       System.out.println("File was created");
 //        System.out.println(file.getCanonicalPath());
         if (file.isDirectory()) {
