@@ -7,25 +7,26 @@ import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
-import java.util.Scanner;
+
 
 public class Main {
 
     public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
-        Scanner scanner = new Scanner(System.in);
-        Deck deck = new Deck();
 
-        for(int i=0;i<5; i++){
-           deck.add(scanner.nextLine());
-        }
+        Deck deck = new Deck("D:\\Projects\\GitHub\\JavaMTG\\src\\com\\company\\files");
 
-        DeckController deckController = new DeckController(deck);
 
         System.out.println("Колода готова");
+        System.out.println();
 
-        deckController.shuffle(deck);
+        DeckController controller = new DeckController(deck);
+        controller.shuffle();
 
-        deckController.cardPresent(1,deck);
+
+        for (int i = 0; i < deck.getCards().size(); i++) {
+            System.out.println(deck.getCardFromTop().getCardname());
+
         }
-        //Rfr ds;bnm d >;yjErhfbycrt&
+
     }
+}

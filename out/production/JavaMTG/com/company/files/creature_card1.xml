@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<root>
-    <cardtype>Существо</cardtype>
-    <cardname>Хранитель рельефа</cardname>
-    <cardtext>Бдительность</cardtext>
-    <signaturetext>Легкая добыча дронов Козилека</signaturetext>
-    <cardpic></cardpic>
-    <stats>2-3</stats>
-</root>

@@ -24,7 +24,7 @@ public class DeckController {
         this.deck = deck;
     }
 
-    public void shuffle(Deck deck){                     //сделал это метод void
+    public void shuffle() {                     //сделал это метод void
         Collections.shuffle(deck.getCards());
     }
 
@@ -32,13 +32,13 @@ public class DeckController {
      * В этот метод передается число кард, которое нужно снять.
      * Сделано для того, чтобы тестить легче было
      */
-    public void cardPresent(int numOfCards, Deck deck){
+    public void cardPresent(int numOfCards, Deck deck) {
         for (int i = 0; i < numOfCards; i++) {
             Card card = deck.getCards().get(0);
             deck.getCards().remove(0);
             System.out.println(card.getCardname());
         }
 
-        }
     }
+}
 

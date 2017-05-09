@@ -1,9 +1,0 @@
-<?xml version="1.0"?>
-<root>
-    <cardtype>Существо</cardtype>
-    <cardname>Гевонская неосвященная</cardname>
-    <cardtext>Каждый раз, когда существо под вашим контролем умирает, положите один жетон +1\+1 на ГГевонскую Неосвященную</cardtext>
-    <signaturetext>мы пришли в церковь за утешением бла бла бла</signaturetext>
-    <cardpic></cardpic>
-    <stats>2-4</stats>
-</root>
