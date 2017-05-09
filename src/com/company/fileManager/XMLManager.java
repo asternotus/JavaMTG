@@ -15,18 +15,19 @@ import java.io.IOException;
 public class XMLManager {
 
     SAXParserFactory factory;
-    SAXParser parser ;
+    SAXParser parser;
     MySAXParser saxp;
+
     public XMLManager() throws ParserConfigurationException, SAXException {
         factory = SAXParserFactory.newInstance();
         parser = factory.newSAXParser();
-        saxp= new MySAXParser();
+        saxp = new MySAXParser();
     }
 
 
     public Card makeCard(String fileName) throws IOException, SAXException {
 
-        parser.parse(fileName,saxp);
+        parser.parse(fileName, saxp);
         return saxp.getThisCard();
     }
 }

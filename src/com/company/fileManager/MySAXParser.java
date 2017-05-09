@@ -40,21 +40,18 @@ public class MySAXParser extends DefaultHandler {
             try {
                 if (type.equals("Существо")) {
                     thisCard = new CreatureCard();
-                }
-                else if (type.equals("Мгновенное заклинание")) {
+                } else if (type.equals("Мгновенное заклинание")) {
                     thisCard = new InstantCard();
-                }
-                else if (type.equals("Волшебство")) {
+                } else if (type.equals("Волшебство")) {
                     thisCard = new MagicCard();
-                }
-                else if (type.equals("Чары")) {
+                } else if (type.equals("Чары")) {
                     thisCard = new EnchantmentCard();
-                }
-                else if (type.equals("Земля")) {
+                } else if (type.equals("Земля")) {
                     thisCard = new LandCard();
-                }
-                else if (type.equals("Фишка")) {
+                } else if (type.equals("Фишка")) {
                     thisCard = new ChipCard();
+                } else if (type.equals("Артефакт")) {
+                    thisCard = new ArtifactCard();
                 } else {
                     System.out.println("hereError");
                     throw new Exception("Введенные данные не соответствуют");

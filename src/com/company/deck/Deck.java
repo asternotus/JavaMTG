@@ -24,7 +24,7 @@ public class Deck {
         return cards;
     }
 
-    public Deck(String name) throws ParserConfigurationException, SAXException {
+    public Deck(String path) throws ParserConfigurationException, SAXException {
         cards = new ArrayList<>();
         try {
             manager = new XMLManager();
@@ -32,7 +32,7 @@ public class Deck {
             e.printStackTrace();
         }
         try {
-            add(name);
+            add(path);
         } catch (ParserConfigurationException e) {
             e.printStackTrace();
         } catch (SAXException e) {
@@ -42,10 +42,10 @@ public class Deck {
         }
     }
 
-    public void add(String name) throws ParserConfigurationException, SAXException, IOException {
+    public void add(String path) throws ParserConfigurationException, SAXException, IOException {
 
-        File file = new File(name);
-//        System.out.println("File was created");
+        File file = new File(path);
+        //       System.out.println("File was created");
 //        System.out.println(file.getCanonicalPath());
         if (file.isDirectory()) {
 
@@ -53,11 +53,24 @@ public class Deck {
             for (File f : data) {
                 if (f.isFile()) {
                     cards.add(manager.makeCard(f.getCanonicalPath()));
+
+                    if (cards.get(cards.size() - 1).getCardtype().equals("Земля")) {
+                        for (int i = 0; i < 19; i++) {
+                            cards.add(manager.makeCard(f.getCanonicalPath()));
+                        }
+                    } else {
+                        for (int i = 0; i < 3; i++) {
+                            cards.add(manager.makeCard(f.getCanonicalPath()));
+                        }
+                    }
+                } else {
+                    System.out.println("It is not dir ");
                 }
             }
         }
-
     }
+
+
 
     public void remove() {
         pointer++;
