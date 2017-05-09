@@ -63,10 +63,10 @@ public class Deck {
                             cards.add(manager.makeCard(f.getCanonicalPath()));
                         }
                     }
-                } else {
-                    System.out.println("It is not dir ");
                 }
             }
+        } else {
+            System.out.println("It is not dir ");
         }
     }
 
