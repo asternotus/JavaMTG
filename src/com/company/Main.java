@@ -19,7 +19,7 @@ public class Main {
         //Deck deck = new Deck("D:\\Projects\\GitHub\\JavaMTG\\src\\com\\company\\files");
 
 
-       // System.out.println("Колода готова");
+       System.out.println("Колода готова");
         //System.out.println();
 
         //DeckController controller = new DeckController(deck);
