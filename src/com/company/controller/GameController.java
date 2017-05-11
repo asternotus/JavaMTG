@@ -1,6 +1,7 @@
 package com.company.controller;
 
-import com.company.User.User;
+import com.company.battleField.BattleField;
+import com.company.player.Player;
 
 import java.util.Scanner;
 
@@ -9,66 +10,73 @@ import java.util.Scanner;
  */
 public class GameController {
     Scanner scan;
-    User user1;
-    User user2;
+    Player player1;
+    Player player2;
 
     public GameController() {
         scan = new Scanner(System.in);
     }
 
     public void start() {
-         user1 = new User();
-         user2 = new User();
-        earlyPhase(user1);
+        BattleField bf = new BattleField();
+        player1 = new Player(bf);
+        player2 = new Player(bf);
+        earlyPhase(player1);
     }
 
 
-    public void earlyPhase(User user) {
-        System.out.println("Ранняя фаза игрока 1");
-        if (scan.nextLine().equals("Снять")) {
-            user.getDeck().getCardFromTop();
+    public void earlyPhase(Player player) {
+        System.out.println("Ранняя фаза игрока ");
+        String temp = scan.nextLine();
+        if (temp.equals("Снять")) {
+            System.out.println(player.getDeck().getCardFromTop().getCardname());
         }
 
-        if (scan.nextLine().equals("Завершить")) {
-            mainPhase(user);
+        if (temp.equals("Завершить")) {
+            mainPhase(player);
         }
     }
 
-    public void mainPhase(User user) {
-        System.out.println("Главная фаза игрока 1");
-
-
-        if (scan.nextLine().equals("Завершить")) {
-            battlePhase(user);
-        }
-
-    }
-
-    public void battlePhase(User user) {
-        System.out.println("Боя фаза игрока 1");
+    public void mainPhase(Player player) {
+        System.out.println("Главная фаза игрока ");
 
 
         if (scan.nextLine().equals("Завершить")) {
-            secondMainPhase(user);
+            battlePhase(player);
         }
 
     }
 
-    public void secondMainPhase(User user) {
-        System.out.println("Вторая главная фаза игрока 1");
+    public void battlePhase(Player player) {
+        System.out.println("Боя фаза игрока ");
 
 
         if (scan.nextLine().equals("Завершить")) {
-            finalPhase(user);
+            secondMainPhase(player);
         }
 
     }
 
-    public void finalPhase(User user) {
-        System.out.println("Завершающая фаза игрока 1");
+    public void secondMainPhase(Player player) {
+        System.out.println("Вторая главная фаза игрока ");
+
+
+        if (scan.nextLine().equals("Завершить")) {
+            finalPhase(player);
+        }
+
+    }
+
+    public void finalPhase(Player player) {
+        System.out.println("Завершающая фаза игрока ");
 
         if (scan.nextLine().equals("Завершить ход")) {
-            earlyPhase(user2);
+            if(player.getId()==player1.getId()){
+                earlyPhase(player2);
+            }else{
+                earlyPhase(player1);
+            }
+
         }
 
     }

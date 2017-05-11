@@ -46,7 +46,7 @@ public class Deck {
 
         File file = new File(path);
         //       System.out.println("File was created");
-//        System.out.println(file.getCanonicalPath());
+        System.out.println(file.getCanonicalPath());
         if (file.isDirectory()) {
 
             File[] data = file.listFiles();

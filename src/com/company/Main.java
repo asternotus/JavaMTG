@@ -16,20 +16,6 @@ public class Main {
 
         GameController gameController = new GameController();
         gameController.start();
-        //Deck deck = new Deck("D:\\Projects\\GitHub\\JavaMTG\\src\\com\\company\\files");
-
-
-       System.out.println("Колода готова");
-        //System.out.println();
-
-        //DeckController controller = new DeckController(deck);
-        //controller.shuffle();
-
-
-        //for (int i = 0; i < deck.getCards().size(); i++) {
-        //    System.out.println(deck.getCardFromTop().getCardname());
-
-       // }
 
     }
 }
