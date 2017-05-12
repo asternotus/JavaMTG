@@ -28,14 +28,10 @@ public class DeckController {
         Collections.shuffle(deck.getCards());
     }
 
-    /**
-     * В этот метод передается число кард, которое нужно снять.
-     * Сделано для того, чтобы тестить легче было
-     */
-    public void cardPresent(int numOfCards, Deck deck) {
+    public void cardPresent(int numOfCards, ArrayList<Card> cards) {
         for (int i = 0; i < numOfCards; i++) {
-            Card card = deck.getCards().get(0);
-            deck.getCards().remove(0);
+            Card card = cards.get(0);
+            cards.remove(0);
             System.out.println(card.getCardname());
         }
 

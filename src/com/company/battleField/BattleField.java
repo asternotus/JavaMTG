@@ -23,4 +23,7 @@ public class BattleField {
         data.add(card);
     }
 
+    public ArrayList<Card> getData() {
+        return data;
+    }
 }

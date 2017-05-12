@@ -26,7 +26,6 @@ public class XMLManager {
 
 
     public Card makeCard(String fileName) throws IOException, SAXException {
-
         parser.parse(fileName, saxp);
         return saxp.getThisCard();
     }

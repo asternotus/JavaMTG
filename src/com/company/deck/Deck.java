@@ -45,10 +45,7 @@ public class Deck {
     public void add(String path) throws ParserConfigurationException, SAXException, IOException {
 
         File file = new File(path);
-        //       System.out.println("File was created");
-        System.out.println(file.getCanonicalPath());
         if (file.isDirectory()) {
-
             File[] data = file.listFiles();
             for (File f : data) {
                 if (f.isFile()) {
@@ -76,9 +73,9 @@ public class Deck {
         pointer++;
     }
 
-    public Card getCardFromTop() {
+   /* public Card getCardFromTop() {
         Card card = cards.get(pointer);
         remove();
         return card;
-    }
+    }*/
 }

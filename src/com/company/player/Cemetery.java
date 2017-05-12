@@ -11,11 +11,12 @@ public class Cemetery {
      public void addCard(Card card){
          data.add(card);
      }
+
      public Card getCard(String name) throws IllegalArgumentException{
-         for(Card c:data)
-             if(c.getCardname()==name){
-                 Card temp = c;
-                 data.remove(c);
+         for(Card card:data)
+             if(card.getCardname()==name){
+                 Card temp = card;
+                 data.remove(card);
                  return temp;
              }
 

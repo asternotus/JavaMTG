@@ -8,14 +8,23 @@ import org.xml.sax.SAXException;
 
 import javax.xml.parsers.ParserConfigurationException;
 import java.io.IOException;
+import java.util.Scanner;
 
 
 public class Main {
 
     public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
+        Scanner scan = new Scanner(System.in);
 
-        GameController gameController = new GameController();
-        gameController.start();
+        System.out.println("Приветствую тебя, мироходец, ты готов начать сражение?");
+        if(scan.nextLine().equals("да")){
+            GameController gameController = new GameController(scan);
+            gameController.start();
+        }else{
+            System.out.println("Зачем запускал тогда?");
+        }
+
+
 
     }
 }

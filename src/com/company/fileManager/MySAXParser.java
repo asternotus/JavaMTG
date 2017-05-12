@@ -24,7 +24,7 @@ public class MySAXParser extends DefaultHandler {
 
     @Override
     public void startDocument() throws SAXException {
-        System.out.println("Start parse XML...");
+
     }
 
     @Override
@@ -36,7 +36,6 @@ public class MySAXParser extends DefaultHandler {
     public void characters(char[] ch, int start, int length) throws SAXException {
         if (thisElement.equals("cardtype")) {
             String type = new String(ch, start, length);
-            System.out.println(type);
             try {
                 if (type.equals("Существо")) {
                     thisCard = new CreatureCard();
@@ -80,6 +79,7 @@ public class MySAXParser extends DefaultHandler {
             thisCard.setForce(force);
             thisCard.setLife(life);
         }
+
     }
 
     @Override
