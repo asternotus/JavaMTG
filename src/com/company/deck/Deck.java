@@ -73,9 +73,9 @@ public class Deck {
         pointer++;
     }
 
-   /* public Card getCardFromTop() {
+    public Card getCardFromTop() {
         Card card = cards.get(pointer);
         remove();
         return card;
-    }*/
+    }
 }

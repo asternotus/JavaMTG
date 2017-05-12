@@ -38,7 +38,7 @@ public class Player {
             e.printStackTrace();} catch (IOException e) {
             e.printStackTrace();
         }
-        hand = new Hand(deck.getCards());
+        hand = new Hand(deck);
 
     }
 
