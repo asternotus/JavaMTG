@@ -30,7 +30,7 @@ public class Player {
 
         System.out.println(id);
         try {
-            deck = new Deck("D:\\Projects\\GitHub\\JavaMTG\\src\\com\\company\\files");
+            deck = new Deck("./JavaMTG/src/com/company/files");
             controller = new DeckController(deck);
         } catch (ParserConfigurationException e) {
             e.printStackTrace();

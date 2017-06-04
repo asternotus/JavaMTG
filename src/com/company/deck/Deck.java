@@ -45,12 +45,13 @@ public class Deck {
     public void add(String path) throws ParserConfigurationException, SAXException, IOException {
 
         File file = new File(path);
+
         if (file.isDirectory()) {
             File[] data = file.listFiles();
             for (File f : data) {
                 if (f.isFile()) {
                     cards.add(manager.makeCard(f.getCanonicalPath()));
-
+                    System.out.println("make one card");
                     if (cards.get(cards.size() - 1).getCardtype().equals("Земля")) {
                         for (int i = 0; i < 19; i++) {
                             cards.add(manager.makeCard(f.getCanonicalPath()));
@@ -63,7 +64,7 @@ public class Deck {
                 }
             }
         } else {
-            System.out.println("It is not dir ");
+            System.out.println("It is not а dir ");
         }
     }
 

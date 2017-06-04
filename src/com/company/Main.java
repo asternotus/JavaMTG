@@ -1,6 +1,7 @@
 package com.company;
 
 
+import com.company.UI.JavaMTGUI;
 import com.company.controller.GameController;
 import com.company.deck.Deck;
 import com.company.deck.DeckController;
@@ -14,6 +15,7 @@ import java.util.Scanner;
 public class Main {
 
     public static void main(String[] args) throws ParserConfigurationException, SAXException, IOException {
+        JavaMTGUI frame = new JavaMTGUI();
         Scanner scan = new Scanner(System.in);
 
         System.out.println("Приветствую тебя, мироходец, ты готов начать сражение?");
